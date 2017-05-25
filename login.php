@@ -61,10 +61,6 @@ class Login extends BaseAdminController
             $remember = false;
         }
 
-        /*if ($this->dx_auth->is_max_login_attempts_exceeded()) {
-            $this->form_validation->set_rules('captcha', lang('Protection code', 'admin'), 'trim|required|xss_clean|callback_captcha_check');
-        } капча сломана, поэтому в админку хуй попадёшь */
-
         if ($this->form_validation->run($this) == FALSE) {
             $err_object = &_get_validation_object();
 
